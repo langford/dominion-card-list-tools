@@ -58,16 +58,15 @@ span.setName {
   background-color: #eee;
 }
 
-
-
+@media print {
+body {-webkit-print-color-adjust: exact;}
+}
 </style>
 
 <body>
-  {{{#entries}}}
-  <div class="cardSetRow"><span class="setName">{{{setName}}}</span> <span class="expansion">{{{expansion}}}</span><span class="cards">{{{cards}}}</span>{{{#additional}}}<span class="additionalLabel">{{{label}}}</span><span class="additionalCards">{{{cards}}}</span>{{{/additional}}}</div>
-  {{{/entries}}}
-  
-
+  {{#entries}}
+  <div class="cardSetRow"><span class="setName">{{{setName}}}</span> <span class="expansion">{{{expansion}}}</span><span class="cards">{{{cards}}}</span>{{#additional}}<span class="additionalLabel">{{{label}}}</span><span class="additionalCards">{{{cards}}}</span>{{/additional}}</div>
+  {{/entries}}
 </body>
 
 
