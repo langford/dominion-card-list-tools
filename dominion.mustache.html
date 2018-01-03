@@ -50,19 +50,24 @@ span.setName {
   font-weight: bold;
 }
 
-.cardSetRow {
-
+.cardSetRow:nth-child(3n+1) {
+  background-color: #ccc;
 }
+
+.cardSetRow:nth-child(3n+2) {
+  background-color: #eee;
+}
+
+
 
 </style>
 
 <body>
-  {{{entries}}}
- 
-<!--
-    <div class="cardSetRow"><span class="setName">Bla's Blally</span> <span class="expansion">Dominion, Intrigue</span><span class="dash"> - </span><span class="cards">Apple, Dog, Pony, Lice, Rat, Crow</span><span class="additionalLabel">Additional:</span><span class="additionalCards">Vaccarino's Joke</span></div>
-    <div class="cardSetRow"><span class="setName">Bla's Blally</span> <span class="expansion">Dominion, Intrigue</span><span class="dash"> - </span><span class="cards">Apple, Dog, Pony, Lice, Rat, Crow</span><span class="additionalLabel">Additional:</span><span class="additionalCards">Vaccarino's Joke</span></div>
--->
+  {{{#entries}}}
+  <div class="cardSetRow"><span class="setName">{{{setName}}}</span> <span class="expansion">{{{expansion}}}</span><span class="cards">{{{cards}}}</span>{{{#additional}}}<span class="additionalLabel">{{{label}}}</span><span class="additionalCards">{{{cards}}}</span>{{{/additional}}}</div>
+  {{{/entries}}}
+  
+
 </body>
 
 
